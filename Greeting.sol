@@ -8,8 +8,8 @@ contract Greeting {
     string public greetingPrefix = "Hello ";
 
     // we'll set the name
-    constructor(string memory initialName) {
-        name = initialName;
+    constructor(string memory _initialName) {
+        name = _initialName;
     }
 
     function setName(string memory _newName) public {
