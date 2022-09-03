@@ -21,4 +21,9 @@ contract Greeting {
     function getGreeting() public view returns (string memory) {
         return string(abi.encodePacked(greetingPrefix, name));
     }
+    
+    // external because the money being sent from outside
+    receive() external payable {
+        emit Deposit(msg.sender, msg.value);
+    }
 }
